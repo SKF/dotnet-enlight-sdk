@@ -1,0 +1,72 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "SKF.Enlight.ProtocolBuffers";
+
+package grpcapi;
+
+service Hierarchy {
+	rpc DeepPing (Void) returns (String) {}
+	rpc GetNode (String) returns (Node) {}
+	rpc GetNodes (String) returns (Nodes) {}
+	rpc SaveNode (SaveNodeInput) returns (String) {}
+	rpc DeleteNode (DeleteNodeInput) returns (Void) {}
+	rpc GetEventStream (Void) returns (stream Bytes) {}
+}
+
+message Origin {
+	string id = 1;
+	string type = 2;
+	string provider = 3;
+}
+
+message MeasurementPoint {
+	string angular = 1;
+	int32 bearing = 3;
+	string measurementType = 4;
+	string shaft = 5;
+	string shaftSide = 6;
+}
+
+message AssetNode {
+	string criticality = 1;
+}
+
+message Node {
+	string id = 1;
+	string label = 2;
+	string description = 3;
+	string type = 4;
+	string criticality = 5;
+	string subType = 6;
+	Origin origin = 7;
+	AssetNode assetNode = 8;
+	MeasurementPoint measurementPoint = 9;
+}
+
+message Nodes {
+	repeated Node nodes = 1;
+}
+
+message String {
+	string value = 1;
+}
+
+message Bytes {
+	bytes value = 1;
+}
+
+message SaveNodeInput {
+	string userId = 1;
+	Node node = 3;
+	string parentId = 2;
+	Origin parentOrigin = 4;
+}
+
+message DeleteNodeInput {
+	string userId = 1;
+	string nodeId = 2;
+	Origin origin = 3;
+}
+
+
+message Void {}
