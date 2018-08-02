@@ -25,9 +25,13 @@ namespace SKF.Enlight.Clients
             _conn.Close();
         }
 
-        public void IngestNodeData()
+        public void IngestNodeData(Guid nodeid, NodeData data)
         {
-            IngestNodeDataInput request = new IngestNodeDataInput();
+            IngestNodeDataInput request = new IngestNodeDataInput
+            {
+                NodeId = nodeid.ToString(),
+                NodeData = data,
+            };
             _client.IngestNodeData(request);
         }
 

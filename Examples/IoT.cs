@@ -1,13 +1,14 @@
 ﻿using System;
 using System.IO;
-using SKF.Enlight.Clients;
+using SKF.Enlight.ProtocolBuffers;
 
 namespace SKF.Enlight.Examples
 {
-    public class DeepPing
+    public class IoT
     {
         public static void Main(string[] args)
         {
+            // Setup, fetch certs etc.
             const string basePath = "../../../certs";
             const string envHost = "ENLIGHT_GRPC_IOT_HOST";
             const string envPort = "ENLIGHT_GRPC_IOT_PORT";
@@ -27,14 +28,38 @@ namespace SKF.Enlight.Examples
             }
             else
             {
-                var iotClient = new IoT(Path.Combine(basePath, "iot_ca.crt"),
+                // Certs etc are available, create a new client
+                var iotClient = new Clients.IoT(Path.Combine(basePath, "iot_ca.crt"),
                     Path.Combine(basePath, "iot_client.crt"),
                     Path.Combine(basePath, "iot_client.key"),
                     host, int.Parse(port));
 
+                // Test the DeepPing method
                 Console.WriteLine($"Sending ping to: {host}:{port}");
                 Console.WriteLine("Reply: " + iotClient.DeepPing());
 
+                // Test the IngestData method
+                Console.WriteLine("Sending data to IngestNodeData");
+                iotClient.IngestNodeData(
+                    Guid.NewGuid(),
+                    new NodeData
+                    {
+                        ContentType = NodeDataContentType.DataPoint,
+                        CreatedAt = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
+                        DataPoint = new DataPoint
+                        {
+                            Coordinate = new Coordinate
+                            {
+                                X = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
+                                Y = 75,
+                            },
+                            XUnit = "ms",
+                            YUnit = "coffe",
+                        }
+                    }
+                );
+
+                // All done, close cleanly.
                 iotClient.Close();
             }
 
