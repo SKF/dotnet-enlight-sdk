@@ -40,8 +40,10 @@ namespace SKF.Enlight.Examples
 
                 // Test the IngestData method
                 Console.WriteLine("Sending data to IngestNodeData");
+
+                // Test with DataPoint input
                 iotClient.IngestNodeData(
-                    Guid.NewGuid(),
+                    Guid.NewGuid(), // Use a specific node id instead
                     new NodeData
                     {
                         ContentType = NodeDataContentType.DataPoint,
@@ -56,6 +58,33 @@ namespace SKF.Enlight.Examples
                             XUnit = "ms",
                             YUnit = "coffe",
                         }
+                    }
+                );
+
+                // Test with TimeSeries input
+                var timeseries = new TimeSeries
+                {
+                    XUnit = "ms",
+                    YUnit = "gE",
+                };
+                timeseries.Coordinates.Add(new Coordinate
+                {
+                    X = 1,
+                    Y = 2,
+                });
+                timeseries.Coordinates.Add(new Coordinate
+                {
+                    X = 2,
+                    Y = 3,
+                });
+
+                iotClient.IngestNodeData(
+                    Guid.NewGuid(), // Use a specific node id instead
+                    new NodeData
+                    {
+                        ContentType = NodeDataContentType.TimeSeries,
+                        CreatedAt = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
+                        TimeSeries = timeseries,
                     }
                 );
 
