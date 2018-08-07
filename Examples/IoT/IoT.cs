@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
-using SKF.Enlight.ProtocolBuffers;
+using SKF.Enlight.Clients;
+using SKF.Enlight.API.IoT;
 
 namespace SKF.Enlight.Examples
 {
@@ -29,20 +30,20 @@ namespace SKF.Enlight.Examples
             else
             {
                 // Certs etc are available, create a new client
-                var iotClient = new Clients.IoT(Path.Combine(basePath, "iot_ca.crt"),
+                var client = new Clients.IoT(Path.Combine(basePath, "iot_ca.crt"),
                     Path.Combine(basePath, "iot_client.crt"),
                     Path.Combine(basePath, "iot_client.key"),
                     host, int.Parse(port));
 
                 // Test the DeepPing method
                 Console.WriteLine($"Sending ping to: {host}:{port}");
-                Console.WriteLine("Reply: " + iotClient.DeepPing());
+                Console.WriteLine("Reply: " + client.DeepPing());
 
                 // Test the IngestData method
                 Console.WriteLine("Sending data to IngestNodeData");
 
                 // Test with DataPoint input
-                iotClient.IngestNodeData(
+                client.IngestNodeData(
                     Guid.NewGuid(), // Use a specific node id instead
                     new NodeData
                     {
@@ -78,7 +79,7 @@ namespace SKF.Enlight.Examples
                     Y = 3,
                 });
 
-                iotClient.IngestNodeData(
+                client.IngestNodeData(
                     Guid.NewGuid(), // Use a specific node id instead
                     new NodeData
                     {
@@ -89,7 +90,7 @@ namespace SKF.Enlight.Examples
                 );
 
                 // All done, close cleanly.
-                iotClient.Close();
+                client.Close();
             }
 
             Console.WriteLine("<press any key to exit>");
