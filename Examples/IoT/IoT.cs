@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using SKF.Enlight.Clients;
 using SKF.Enlight.API.IoT;
 
 namespace SKF.Enlight.Examples

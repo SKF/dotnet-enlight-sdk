@@ -8,21 +8,13 @@ using DSKFFile = SKF.Enlight.API.MProxyHub.AvailableDSKFStreamOutput;
 
 namespace SKF.Enlight.Clients
 {
-    public class MProxyHub
+    public class MProxyHub : Client
     {
-        private Connection _conn;
         private MProxyHubAPI.MicrologProxyHub.MicrologProxyHubClient _client;
 
-        public MProxyHub(string cacert, string cert, string key, string host, int port)
+        public MProxyHub(string cacert, string cert, string key, string host, int port) : base(cacert, cert, key, host, port)
         {
-            _conn = new Connection(cacert, cert, key);
-            _conn.Open(host, port);
             _client = new MProxyHubAPI.MicrologProxyHub.MicrologProxyHubClient(_conn.Channel);
-        }
-
-        public void Close()
-        {
-            _conn.Close();
         }
 
         public string DeepPing()

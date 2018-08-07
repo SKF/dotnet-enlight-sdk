@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using SKF.Enlight.Clients;
 using SKF.Enlight.API.MProxyHub;
 
 namespace SKF.Enlight.Examples
@@ -37,6 +38,15 @@ namespace SKF.Enlight.Examples
                 // Test the DeepPing method
                 Console.WriteLine($"Sending ping to: {host}:{port}");
                 Console.WriteLine("Reply: " + client.DeepPing());
+
+                // Test the SetTaskStatus method
+                Console.WriteLine("Setting completed status of a task");
+                client.SetTaskStatus("a task id", "some user", TaskStatus.Completed);
+
+                // Test the"
+                Console.WriteLine("Checking for available DSKF Files");
+                var files = client.AvailableDSKFFiles();
+                Console.WriteLine($"Reply: {files}");
 
                 // All done, close cleanly.
                 client.Close();
