@@ -1,7 +1,6 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "SKF.Enlight.ProtocolBuffers";
-
+option csharp_namespace = "SKF.Enlight.API.IoT";
 
 package iotgrpcapi;
 

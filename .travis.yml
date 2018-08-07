@@ -1,0 +1,11 @@
+﻿language: csharp
+solution: dotnet-enlight-sdk.sln
+
+matrix:
+  include:
+  - dotnet: 2.0
+    mono: none
+    script:
+    - dotnet restore
+    - dotnet build --configuration Release --no-restore --verbosity n
+  - mono: latest

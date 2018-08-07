@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
-using SKF.Enlight.ProtocolBuffers;
+using SKF.Enlight.Clients;
+using SKF.Enlight.API.IoT;
 
 namespace SKF.Enlight.Examples
 {
@@ -29,19 +30,21 @@ namespace SKF.Enlight.Examples
             else
             {
                 // Certs etc are available, create a new client
-                var iotClient = new Clients.IoT(Path.Combine(basePath, "iot_ca.crt"),
+                var client = new Clients.IoT(Path.Combine(basePath, "iot_ca.crt"),
                     Path.Combine(basePath, "iot_client.crt"),
                     Path.Combine(basePath, "iot_client.key"),
                     host, int.Parse(port));
 
                 // Test the DeepPing method
                 Console.WriteLine($"Sending ping to: {host}:{port}");
-                Console.WriteLine("Reply: " + iotClient.DeepPing());
+                Console.WriteLine("Reply: " + client.DeepPing());
 
                 // Test the IngestData method
                 Console.WriteLine("Sending data to IngestNodeData");
-                iotClient.IngestNodeData(
-                    Guid.NewGuid(),
+
+                // Test with DataPoint input
+                client.IngestNodeData(
+                    Guid.NewGuid(), // Use a specific node id instead
                     new NodeData
                     {
                         ContentType = NodeDataContentType.DataPoint,
@@ -59,8 +62,35 @@ namespace SKF.Enlight.Examples
                     }
                 );
 
+                // Test with TimeSeries input
+                var timeseries = new TimeSeries
+                {
+                    XUnit = "ms",
+                    YUnit = "gE",
+                };
+                timeseries.Coordinates.Add(new Coordinate
+                {
+                    X = 1,
+                    Y = 2,
+                });
+                timeseries.Coordinates.Add(new Coordinate
+                {
+                    X = 2,
+                    Y = 3,
+                });
+
+                client.IngestNodeData(
+                    Guid.NewGuid(), // Use a specific node id instead
+                    new NodeData
+                    {
+                        ContentType = NodeDataContentType.TimeSeries,
+                        CreatedAt = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
+                        TimeSeries = timeseries,
+                    }
+                );
+
                 // All done, close cleanly.
-                iotClient.Close();
+                client.Close();
             }
 
             Console.WriteLine("<press any key to exit>");

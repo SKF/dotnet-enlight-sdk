@@ -1,23 +1,15 @@
 ﻿using SKF.Enlight.Common;
-using SKF.Enlight.ProtocolBuffers;
+using HierarchyAPI = SKF.Enlight.API.Hierarchy;
 
 namespace SKF.Enlight.Clients
 {
-    public class Hierarchy
+    public class Hierarchy : Client
     {
-        private Connection _conn;
-        private ProtocolBuffers.Hierarchy.HierarchyClient _client;
+        private HierarchyAPI.Hierarchy.HierarchyClient _client;
 
-        public Hierarchy()
+        public Hierarchy(string cacert, string cert, string key, string host, int port) : base(cacert, cert, key, host, port)
         {
-            _conn = new Connection("dummy_cacert_path", "dummy_cert_path", "dummy_key_path");
-            _conn.Open("a host", 443);
-            _client = new ProtocolBuffers.Hierarchy.HierarchyClient(_conn.Channel);
-        }
-
-        public void Close()
-        {
-            _conn.Close();
+            _client = new HierarchyAPI.Hierarchy.HierarchyClient(_conn.Channel);
         }
     }
 }
