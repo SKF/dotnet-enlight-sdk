@@ -1,41 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SKF.Enlight.Common;
-using SKF.Enlight.ProtocolBuffers;
+using IoTAPI = SKF.Enlight.API.IoT;
 
 namespace SKF.Enlight.Clients
 {
-    public class IoT
+    public class IoT : Client
     {
-        private Connection _conn;
-        private ProtocolBuffers.IoT.IoTClient _client;
+        private IoTAPI.IoT.IoTClient _client;
 
-        public IoT(string cacert, string cert, string key, string host, int port)
+        public IoT(string cacert, string cert, string key, string host, int port) : base(cacert, cert, key, host, port)
         {
-            _conn = new Connection(cacert, cert, key);
-            _conn.Open(host, port);
-            _client = new ProtocolBuffers.IoT.IoTClient(_conn.Channel);
+            _client = new IoTAPI.IoT.IoTClient(_conn.Channel);
         }
 
-        public void Close()
+        public void IngestNodeData(Guid nodeid, IoTAPI.NodeData data)
         {
-            _conn.Close();
-        }
-
-        public void IngestNodeData()
-        {
-            IngestNodeDataInput request = new IngestNodeDataInput();
-            _client.IngestNodeData(request);
+            IoTAPI.IngestNodeDataInput request = new IoTAPI.IngestNodeDataInput
+            {
+                NodeId = nodeid.ToString(),
+                NodeData = data,
+            };
+            _client.IngestNodeData(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
         }
 
         public string DeepPing()
         {
-            return _client.DeepPing(new PrimitiveVoid(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))).ToString();
+            return _client.DeepPing(new IoTAPI.PrimitiveVoid(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))).ToString();
         }
     }
-
 }
-
