@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace SKF.Enlight.ProtocolBuffers {
+namespace SKF.Enlight.API.Hierarchy {
 
   /// <summary>Holder for reflection information generated from Hierarchy.proto</summary>
   public static partial class HierarchyReflection {
@@ -47,21 +47,21 @@ namespace SKF.Enlight.ProtocolBuffers {
             "Y2FwaS5Ob2RlcyIAEjUKCFNhdmVOb2RlEhYuZ3JwY2FwaS5TYXZlTm9kZUlu",
             "cHV0Gg8uZ3JwY2FwaS5TdHJpbmciABI3CgpEZWxldGVOb2RlEhguZ3JwY2Fw",
             "aS5EZWxldGVOb2RlSW5wdXQaDS5ncnBjYXBpLlZvaWQiABIzCg5HZXRFdmVu",
-            "dFN0cmVhbRINLmdycGNhcGkuVm9pZBoOLmdycGNhcGkuQnl0ZXMiADABQh6q",
-            "AhtTS0YuRW5saWdodC5Qcm90b2NvbEJ1ZmZlcnNiBnByb3RvMw=="));
+            "dFN0cmVhbRINLmdycGNhcGkuVm9pZBoOLmdycGNhcGkuQnl0ZXMiADABQhyq",
+            "AhlTS0YuRW5saWdodC5BUEkuSGllcmFyY2h5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Origin), global::SKF.Enlight.ProtocolBuffers.Origin.Parser, new[]{ "Id", "Type", "Provider" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.MeasurementPoint), global::SKF.Enlight.ProtocolBuffers.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.AssetNode), global::SKF.Enlight.ProtocolBuffers.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Node), global::SKF.Enlight.ProtocolBuffers.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Nodes), global::SKF.Enlight.ProtocolBuffers.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.String), global::SKF.Enlight.ProtocolBuffers.String.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Bytes), global::SKF.Enlight.ProtocolBuffers.Bytes.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.SaveNodeInput), global::SKF.Enlight.ProtocolBuffers.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.DeleteNodeInput), global::SKF.Enlight.ProtocolBuffers.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Void), global::SKF.Enlight.ProtocolBuffers.Void.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Origin), global::SKF.Enlight.API.Hierarchy.Origin.Parser, new[]{ "Id", "Type", "Provider" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.MeasurementPoint), global::SKF.Enlight.API.Hierarchy.MeasurementPoint.Parser, new[]{ "Angular", "Bearing", "MeasurementType", "Shaft", "ShaftSide" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.AssetNode), global::SKF.Enlight.API.Hierarchy.AssetNode.Parser, new[]{ "Criticality" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Node), global::SKF.Enlight.API.Hierarchy.Node.Parser, new[]{ "Id", "Label", "Description", "Type", "Criticality", "SubType", "Origin", "AssetNode", "MeasurementPoint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Nodes), global::SKF.Enlight.API.Hierarchy.Nodes.Parser, new[]{ "Nodes_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.String), global::SKF.Enlight.API.Hierarchy.String.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Bytes), global::SKF.Enlight.API.Hierarchy.Bytes.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.SaveNodeInput), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser, new[]{ "UserId", "Node", "ParentId", "ParentOrigin" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser, new[]{ "UserId", "NodeId", "Origin" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.Hierarchy.Void), global::SKF.Enlight.API.Hierarchy.Void.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[0]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -261,7 +261,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -502,7 +502,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -631,7 +631,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -733,9 +733,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "origin" field.</summary>
     public const int OriginFieldNumber = 7;
-    private global::SKF.Enlight.ProtocolBuffers.Origin origin_;
+    private global::SKF.Enlight.API.Hierarchy.Origin origin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Origin Origin {
+    public global::SKF.Enlight.API.Hierarchy.Origin Origin {
       get { return origin_; }
       set {
         origin_ = value;
@@ -744,9 +744,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "assetNode" field.</summary>
     public const int AssetNodeFieldNumber = 8;
-    private global::SKF.Enlight.ProtocolBuffers.AssetNode assetNode_;
+    private global::SKF.Enlight.API.Hierarchy.AssetNode assetNode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.AssetNode AssetNode {
+    public global::SKF.Enlight.API.Hierarchy.AssetNode AssetNode {
       get { return assetNode_; }
       set {
         assetNode_ = value;
@@ -755,9 +755,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "measurementPoint" field.</summary>
     public const int MeasurementPointFieldNumber = 9;
-    private global::SKF.Enlight.ProtocolBuffers.MeasurementPoint measurementPoint_;
+    private global::SKF.Enlight.API.Hierarchy.MeasurementPoint measurementPoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.MeasurementPoint MeasurementPoint {
+    public global::SKF.Enlight.API.Hierarchy.MeasurementPoint MeasurementPoint {
       get { return measurementPoint_; }
       set {
         measurementPoint_ = value;
@@ -916,19 +916,19 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+          origin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
       if (other.assetNode_ != null) {
         if (assetNode_ == null) {
-          assetNode_ = new global::SKF.Enlight.ProtocolBuffers.AssetNode();
+          assetNode_ = new global::SKF.Enlight.API.Hierarchy.AssetNode();
         }
         AssetNode.MergeFrom(other.AssetNode);
       }
       if (other.measurementPoint_ != null) {
         if (measurementPoint_ == null) {
-          measurementPoint_ = new global::SKF.Enlight.ProtocolBuffers.MeasurementPoint();
+          measurementPoint_ = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
         }
         MeasurementPoint.MergeFrom(other.MeasurementPoint);
       }
@@ -969,21 +969,21 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 58: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+              origin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
             }
             input.ReadMessage(origin_);
             break;
           }
           case 66: {
             if (assetNode_ == null) {
-              assetNode_ = new global::SKF.Enlight.ProtocolBuffers.AssetNode();
+              assetNode_ = new global::SKF.Enlight.API.Hierarchy.AssetNode();
             }
             input.ReadMessage(assetNode_);
             break;
           }
           case 74: {
             if (measurementPoint_ == null) {
-              measurementPoint_ = new global::SKF.Enlight.ProtocolBuffers.MeasurementPoint();
+              measurementPoint_ = new global::SKF.Enlight.API.Hierarchy.MeasurementPoint();
             }
             input.ReadMessage(measurementPoint_);
             break;
@@ -1002,7 +1002,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1030,11 +1030,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "nodes" field.</summary>
     public const int Nodes_FieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.Node> _repeated_nodes_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.ProtocolBuffers.Node.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Node> nodes_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Node>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.Hierarchy.Node> _repeated_nodes_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.Hierarchy.Node.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Node> nodes_ = new pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Node>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Node> Nodes_ {
+    public pbc::RepeatedField<global::SKF.Enlight.API.Hierarchy.Node> Nodes_ {
       get { return nodes_; }
     }
 
@@ -1123,7 +1123,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1252,7 +1252,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1381,7 +1381,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1423,9 +1423,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "node" field.</summary>
     public const int NodeFieldNumber = 3;
-    private global::SKF.Enlight.ProtocolBuffers.Node node_;
+    private global::SKF.Enlight.API.Hierarchy.Node node_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Node Node {
+    public global::SKF.Enlight.API.Hierarchy.Node Node {
       get { return node_; }
       set {
         node_ = value;
@@ -1445,9 +1445,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "parentOrigin" field.</summary>
     public const int ParentOriginFieldNumber = 4;
-    private global::SKF.Enlight.ProtocolBuffers.Origin parentOrigin_;
+    private global::SKF.Enlight.API.Hierarchy.Origin parentOrigin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Origin ParentOrigin {
+    public global::SKF.Enlight.API.Hierarchy.Origin ParentOrigin {
       get { return parentOrigin_; }
       set {
         parentOrigin_ = value;
@@ -1546,7 +1546,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.node_ != null) {
         if (node_ == null) {
-          node_ = new global::SKF.Enlight.ProtocolBuffers.Node();
+          node_ = new global::SKF.Enlight.API.Hierarchy.Node();
         }
         Node.MergeFrom(other.Node);
       }
@@ -1555,7 +1555,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.parentOrigin_ != null) {
         if (parentOrigin_ == null) {
-          parentOrigin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+          parentOrigin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
         }
         ParentOrigin.MergeFrom(other.ParentOrigin);
       }
@@ -1580,14 +1580,14 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 26: {
             if (node_ == null) {
-              node_ = new global::SKF.Enlight.ProtocolBuffers.Node();
+              node_ = new global::SKF.Enlight.API.Hierarchy.Node();
             }
             input.ReadMessage(node_);
             break;
           }
           case 34: {
             if (parentOrigin_ == null) {
-              parentOrigin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+              parentOrigin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
             }
             input.ReadMessage(parentOrigin_);
             break;
@@ -1606,7 +1606,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1658,9 +1658,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "origin" field.</summary>
     public const int OriginFieldNumber = 3;
-    private global::SKF.Enlight.ProtocolBuffers.Origin origin_;
+    private global::SKF.Enlight.API.Hierarchy.Origin origin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Origin Origin {
+    public global::SKF.Enlight.API.Hierarchy.Origin Origin {
       get { return origin_; }
       set {
         origin_ = value;
@@ -1753,7 +1753,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.origin_ != null) {
         if (origin_ == null) {
-          origin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+          origin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
         }
         Origin.MergeFrom(other.Origin);
       }
@@ -1778,7 +1778,7 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 26: {
             if (origin_ == null) {
-              origin_ = new global::SKF.Enlight.ProtocolBuffers.Origin();
+              origin_ = new global::SKF.Enlight.API.Hierarchy.Origin();
             }
             input.ReadMessage(origin_);
             break;
@@ -1797,7 +1797,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.HierarchyReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.Hierarchy.HierarchyReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

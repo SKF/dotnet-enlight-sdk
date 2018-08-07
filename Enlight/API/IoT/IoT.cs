@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace SKF.Enlight.ProtocolBuffers {
+namespace SKF.Enlight.API.IoT {
 
   /// <summary>Holder for reflection information generated from IoT.proto</summary>
   public static partial class IoTReflection {
@@ -99,35 +99,35 @@ namespace SKF.Enlight.ProtocolBuffers {
             "KAESTAoLR2V0Tm9kZURhdGESHC5pb3RncnBjYXBpLkdldE5vZGVEYXRhSW5w",
             "dXQaHS5pb3RncnBjYXBpLkdldE5vZGVEYXRhT3V0cHV0IgASYAoRR2V0Tm9k",
             "ZURhdGFTdHJlYW0SIi5pb3RncnBjYXBpLkdldE5vZGVEYXRhU3RyZWFtSW5w",
-            "dXQaIy5pb3RncnBjYXBpLkdldE5vZGVEYXRhU3RyZWFtT3V0cHV0IgAwAUIe",
-            "qgIbU0tGLkVubGlnaHQuUHJvdG9jb2xCdWZmZXJzYgZwcm90bzM="));
+            "dXQaIy5pb3RncnBjYXBpLkdldE5vZGVEYXRhU3RyZWFtT3V0cHV0IgAwAUIW",
+            "qgITU0tGLkVubGlnaHQuQVBJLklvVGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.ProtocolBuffers.TaskStatus), typeof(global::SKF.Enlight.ProtocolBuffers.NodeDataContentType), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.TaskDescription), global::SKF.Enlight.ProtocolBuffers.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "Status", "ExternalTaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.InitialTaskDescription), global::SKF.Enlight.ProtocolBuffers.InitialTaskDescription.Parser, new[]{ "UserId", "TaskName", "HierarchyId", "DueDateTimestamp", "FunctionalLocationIds", "ExternalTaskId", "Status" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.TaskUser), global::SKF.Enlight.ProtocolBuffers.TaskUser.Parser, new[]{ "UserId", "TaskId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.SetTaskStatusInput), global::SKF.Enlight.ProtocolBuffers.SetTaskStatusInput.Parser, new[]{ "TaskId", "Status", "UserId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.TaskDescriptions), global::SKF.Enlight.ProtocolBuffers.TaskDescriptions.Parser, new[]{ "TaskDescriptionArr" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds), global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds.Parser, new[]{ "IdArr" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.PrimitiveString), global::SKF.Enlight.ProtocolBuffers.PrimitiveString.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.PrimitiveBool), global::SKF.Enlight.ProtocolBuffers.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.PrimitiveVoid), global::SKF.Enlight.ProtocolBuffers.PrimitiveVoid.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.NodeData), global::SKF.Enlight.ProtocolBuffers.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "QuestionAnswers" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Coordinate), global::SKF.Enlight.ProtocolBuffers.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.DataPoint), global::SKF.Enlight.ProtocolBuffers.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.Spectrum), global::SKF.Enlight.ProtocolBuffers.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.TimeSeries), global::SKF.Enlight.ProtocolBuffers.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.IngestNodeDataInput), global::SKF.Enlight.ProtocolBuffers.IngestNodeDataInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.IngestNodeDataOutput), global::SKF.Enlight.ProtocolBuffers.IngestNodeDataOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.IngestNodeDataStreamInput), global::SKF.Enlight.ProtocolBuffers.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "NodeDataList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.IngestNodeDataStreamOutput), global::SKF.Enlight.ProtocolBuffers.IngestNodeDataStreamOutput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetNodeDataInput), global::SKF.Enlight.ProtocolBuffers.GetNodeDataInput.Parser, new[]{ "NodeId", "Timestamp", "ContentType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetNodeDataOutput), global::SKF.Enlight.ProtocolBuffers.GetNodeDataOutput.Parser, new[]{ "NodeDataList" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetNodeDataStreamInput), global::SKF.Enlight.ProtocolBuffers.GetNodeDataStreamInput.Parser, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetNodeDataStreamOutput), global::SKF.Enlight.ProtocolBuffers.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetTaskStreamInput), global::SKF.Enlight.ProtocolBuffers.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.ProtocolBuffers.GetTaskStreamOutput), global::SKF.Enlight.ProtocolBuffers.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SKF.Enlight.API.IoT.TaskStatus), typeof(global::SKF.Enlight.API.IoT.NodeDataContentType), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescription), global::SKF.Enlight.API.IoT.TaskDescription.Parser, new[]{ "UserId", "TaskId", "TaskName", "HierarchyId", "DueDateTimestamp", "IsCompleted", "FunctionalLocationIds", "Status", "ExternalTaskId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.InitialTaskDescription), global::SKF.Enlight.API.IoT.InitialTaskDescription.Parser, new[]{ "UserId", "TaskName", "HierarchyId", "DueDateTimestamp", "FunctionalLocationIds", "ExternalTaskId", "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskUser), global::SKF.Enlight.API.IoT.TaskUser.Parser, new[]{ "UserId", "TaskId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.SetTaskStatusInput), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser, new[]{ "TaskId", "Status", "UserId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TaskDescriptions), global::SKF.Enlight.API.IoT.TaskDescriptions.Parser, new[]{ "TaskDescriptionArr" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.FunctionalLocationIds), global::SKF.Enlight.API.IoT.FunctionalLocationIds.Parser, new[]{ "IdArr" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveString), global::SKF.Enlight.API.IoT.PrimitiveString.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveBool), global::SKF.Enlight.API.IoT.PrimitiveBool.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.PrimitiveVoid), global::SKF.Enlight.API.IoT.PrimitiveVoid.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.NodeData), global::SKF.Enlight.API.IoT.NodeData.Parser, new[]{ "CreatedAt", "ContentType", "DataPoint", "Spectrum", "TimeSeries", "Note", "Media", "QuestionAnswers" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Coordinate), global::SKF.Enlight.API.IoT.Coordinate.Parser, new[]{ "X", "Y" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.DataPoint), global::SKF.Enlight.API.IoT.DataPoint.Parser, new[]{ "Coordinate", "XUnit", "YUnit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.Spectrum), global::SKF.Enlight.API.IoT.Spectrum.Parser, new[]{ "Coordinates", "XUnit", "YUnit", "WindowFunction", "SpeedRpm" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.TimeSeries), global::SKF.Enlight.API.IoT.TimeSeries.Parser, new[]{ "Coordinates", "XUnit", "YUnit" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataInput), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataOutput), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser, new[]{ "NodeId", "NodeDataList" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataInput), global::SKF.Enlight.API.IoT.GetNodeDataInput.Parser, new[]{ "NodeId", "Timestamp", "ContentType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataOutput), global::SKF.Enlight.API.IoT.GetNodeDataOutput.Parser, new[]{ "NodeDataList" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser, new[]{ "NodeId", "NodeData" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamInput), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser, new[]{ "HierarchyId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::SKF.Enlight.API.IoT.GetTaskStreamOutput), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser, new[]{ "Task" }, null, null, null)
           }));
     }
     #endregion
@@ -162,7 +162,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[0]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -264,9 +264,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "functional_location_ids" field.</summary>
     public const int FunctionalLocationIdsFieldNumber = 7;
-    private global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds functionalLocationIds_;
+    private global::SKF.Enlight.API.IoT.FunctionalLocationIds functionalLocationIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds FunctionalLocationIds {
+    public global::SKF.Enlight.API.IoT.FunctionalLocationIds FunctionalLocationIds {
       get { return functionalLocationIds_; }
       set {
         functionalLocationIds_ = value;
@@ -275,9 +275,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
-    private global::SKF.Enlight.ProtocolBuffers.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.TaskStatus Status {
+    public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -447,7 +447,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.functionalLocationIds_ != null) {
         if (functionalLocationIds_ == null) {
-          functionalLocationIds_ = new global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds();
+          functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
         }
         FunctionalLocationIds.MergeFrom(other.FunctionalLocationIds);
       }
@@ -494,13 +494,13 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 58: {
             if (functionalLocationIds_ == null) {
-              functionalLocationIds_ = new global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds();
+              functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
             }
             input.ReadMessage(functionalLocationIds_);
             break;
           }
           case 64: {
-            status_ = (global::SKF.Enlight.ProtocolBuffers.TaskStatus) input.ReadEnum();
+            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
           case 74: {
@@ -521,7 +521,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[1]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -599,9 +599,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "functional_location_ids" field.</summary>
     public const int FunctionalLocationIdsFieldNumber = 5;
-    private global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds functionalLocationIds_;
+    private global::SKF.Enlight.API.IoT.FunctionalLocationIds functionalLocationIds_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds FunctionalLocationIds {
+    public global::SKF.Enlight.API.IoT.FunctionalLocationIds FunctionalLocationIds {
       get { return functionalLocationIds_; }
       set {
         functionalLocationIds_ = value;
@@ -621,9 +621,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 7;
-    private global::SKF.Enlight.ProtocolBuffers.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.TaskStatus Status {
+    public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -758,7 +758,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.functionalLocationIds_ != null) {
         if (functionalLocationIds_ == null) {
-          functionalLocationIds_ = new global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds();
+          functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
         }
         FunctionalLocationIds.MergeFrom(other.FunctionalLocationIds);
       }
@@ -797,7 +797,7 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 42: {
             if (functionalLocationIds_ == null) {
-              functionalLocationIds_ = new global::SKF.Enlight.ProtocolBuffers.FunctionalLocationIds();
+              functionalLocationIds_ = new global::SKF.Enlight.API.IoT.FunctionalLocationIds();
             }
             input.ReadMessage(functionalLocationIds_);
             break;
@@ -807,7 +807,7 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           }
           case 56: {
-            status_ = (global::SKF.Enlight.ProtocolBuffers.TaskStatus) input.ReadEnum();
+            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
         }
@@ -824,7 +824,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[2]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -981,7 +981,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[3]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1022,9 +1022,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 2;
-    private global::SKF.Enlight.ProtocolBuffers.TaskStatus status_ = 0;
+    private global::SKF.Enlight.API.IoT.TaskStatus status_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.TaskStatus Status {
+    public global::SKF.Enlight.API.IoT.TaskStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -1145,7 +1145,7 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           }
           case 16: {
-            status_ = (global::SKF.Enlight.ProtocolBuffers.TaskStatus) input.ReadEnum();
+            status_ = (global::SKF.Enlight.API.IoT.TaskStatus) input.ReadEnum();
             break;
           }
           case 26: {
@@ -1166,7 +1166,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[4]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1194,11 +1194,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "task_description_arr" field.</summary>
     public const int TaskDescriptionArrFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.TaskDescription> _repeated_taskDescriptionArr_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.ProtocolBuffers.TaskDescription.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.TaskDescription> taskDescriptionArr_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.TaskDescription>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.TaskDescription> _repeated_taskDescriptionArr_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.IoT.TaskDescription.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription> taskDescriptionArr_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.TaskDescription> TaskDescriptionArr {
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.TaskDescription> TaskDescriptionArr {
       get { return taskDescriptionArr_; }
     }
 
@@ -1287,7 +1287,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[5]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1408,7 +1408,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[6]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1537,7 +1537,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[7]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1666,7 +1666,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[8]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1767,7 +1767,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[9]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1813,9 +1813,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 2;
-    private global::SKF.Enlight.ProtocolBuffers.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.NodeDataContentType ContentType {
+    public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
       get { return contentType_; }
       set {
         contentType_ = value;
@@ -1824,9 +1824,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "data_point" field.</summary>
     public const int DataPointFieldNumber = 3;
-    private global::SKF.Enlight.ProtocolBuffers.DataPoint dataPoint_;
+    private global::SKF.Enlight.API.IoT.DataPoint dataPoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.DataPoint DataPoint {
+    public global::SKF.Enlight.API.IoT.DataPoint DataPoint {
       get { return dataPoint_; }
       set {
         dataPoint_ = value;
@@ -1835,9 +1835,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "spectrum" field.</summary>
     public const int SpectrumFieldNumber = 4;
-    private global::SKF.Enlight.ProtocolBuffers.Spectrum spectrum_;
+    private global::SKF.Enlight.API.IoT.Spectrum spectrum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Spectrum Spectrum {
+    public global::SKF.Enlight.API.IoT.Spectrum Spectrum {
       get { return spectrum_; }
       set {
         spectrum_ = value;
@@ -1846,9 +1846,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "time_series" field.</summary>
     public const int TimeSeriesFieldNumber = 5;
-    private global::SKF.Enlight.ProtocolBuffers.TimeSeries timeSeries_;
+    private global::SKF.Enlight.API.IoT.TimeSeries timeSeries_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.TimeSeries TimeSeries {
+    public global::SKF.Enlight.API.IoT.TimeSeries TimeSeries {
       get { return timeSeries_; }
       set {
         timeSeries_ = value;
@@ -2013,19 +2013,19 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.dataPoint_ != null) {
         if (dataPoint_ == null) {
-          dataPoint_ = new global::SKF.Enlight.ProtocolBuffers.DataPoint();
+          dataPoint_ = new global::SKF.Enlight.API.IoT.DataPoint();
         }
         DataPoint.MergeFrom(other.DataPoint);
       }
       if (other.spectrum_ != null) {
         if (spectrum_ == null) {
-          spectrum_ = new global::SKF.Enlight.ProtocolBuffers.Spectrum();
+          spectrum_ = new global::SKF.Enlight.API.IoT.Spectrum();
         }
         Spectrum.MergeFrom(other.Spectrum);
       }
       if (other.timeSeries_ != null) {
         if (timeSeries_ == null) {
-          timeSeries_ = new global::SKF.Enlight.ProtocolBuffers.TimeSeries();
+          timeSeries_ = new global::SKF.Enlight.API.IoT.TimeSeries();
         }
         TimeSeries.MergeFrom(other.TimeSeries);
       }
@@ -2052,26 +2052,26 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           }
           case 16: {
-            contentType_ = (global::SKF.Enlight.ProtocolBuffers.NodeDataContentType) input.ReadEnum();
+            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
           case 26: {
             if (dataPoint_ == null) {
-              dataPoint_ = new global::SKF.Enlight.ProtocolBuffers.DataPoint();
+              dataPoint_ = new global::SKF.Enlight.API.IoT.DataPoint();
             }
             input.ReadMessage(dataPoint_);
             break;
           }
           case 34: {
             if (spectrum_ == null) {
-              spectrum_ = new global::SKF.Enlight.ProtocolBuffers.Spectrum();
+              spectrum_ = new global::SKF.Enlight.API.IoT.Spectrum();
             }
             input.ReadMessage(spectrum_);
             break;
           }
           case 42: {
             if (timeSeries_ == null) {
-              timeSeries_ = new global::SKF.Enlight.ProtocolBuffers.TimeSeries();
+              timeSeries_ = new global::SKF.Enlight.API.IoT.TimeSeries();
             }
             input.ReadMessage(timeSeries_);
             break;
@@ -2102,7 +2102,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[10]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2259,7 +2259,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[11]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2289,9 +2289,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "coordinate" field.</summary>
     public const int CoordinateFieldNumber = 1;
-    private global::SKF.Enlight.ProtocolBuffers.Coordinate coordinate_;
+    private global::SKF.Enlight.API.IoT.Coordinate coordinate_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.Coordinate Coordinate {
+    public global::SKF.Enlight.API.IoT.Coordinate Coordinate {
       get { return coordinate_; }
       set {
         coordinate_ = value;
@@ -2400,7 +2400,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.coordinate_ != null) {
         if (coordinate_ == null) {
-          coordinate_ = new global::SKF.Enlight.ProtocolBuffers.Coordinate();
+          coordinate_ = new global::SKF.Enlight.API.IoT.Coordinate();
         }
         Coordinate.MergeFrom(other.Coordinate);
       }
@@ -2423,7 +2423,7 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           case 10: {
             if (coordinate_ == null) {
-              coordinate_ = new global::SKF.Enlight.ProtocolBuffers.Coordinate();
+              coordinate_ = new global::SKF.Enlight.API.IoT.Coordinate();
             }
             input.ReadMessage(coordinate_);
             break;
@@ -2450,7 +2450,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[12]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2482,11 +2482,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "coordinates" field.</summary>
     public const int CoordinatesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.Coordinate> _repeated_coordinates_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.ProtocolBuffers.Coordinate.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.Coordinate> _repeated_coordinates_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.IoT.Coordinate.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate> Coordinates {
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate> Coordinates {
       get { return coordinates_; }
     }
 
@@ -2683,7 +2683,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[13]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2713,11 +2713,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "coordinates" field.</summary>
     public const int CoordinatesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.Coordinate> _repeated_coordinates_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.ProtocolBuffers.Coordinate.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.Coordinate> _repeated_coordinates_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.IoT.Coordinate.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate> coordinates_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.Coordinate> Coordinates {
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.Coordinate> Coordinates {
       get { return coordinates_; }
     }
 
@@ -2863,7 +2863,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[14]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2903,9 +2903,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "node_data" field.</summary>
     public const int NodeDataFieldNumber = 2;
-    private global::SKF.Enlight.ProtocolBuffers.NodeData nodeData_;
+    private global::SKF.Enlight.API.IoT.NodeData nodeData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.NodeData NodeData {
+    public global::SKF.Enlight.API.IoT.NodeData NodeData {
       get { return nodeData_; }
       set {
         nodeData_ = value;
@@ -2986,7 +2986,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.ProtocolBuffers.NodeData();
+          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -3007,7 +3007,7 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 18: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.ProtocolBuffers.NodeData();
+              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
             }
             input.ReadMessage(nodeData_);
             break;
@@ -3026,7 +3026,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[15]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3130,7 +3130,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[16]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3170,11 +3170,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "node_data_list" field.</summary>
     public const int NodeDataListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.NodeData> _repeated_nodeDataList_codec
-        = pb::FieldCodec.ForMessage(18, global::SKF.Enlight.ProtocolBuffers.NodeData.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData> nodeDataList_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.NodeData> _repeated_nodeDataList_codec
+        = pb::FieldCodec.ForMessage(18, global::SKF.Enlight.API.IoT.NodeData.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData> nodeDataList_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData> NodeDataList {
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData> NodeDataList {
       get { return nodeDataList_; }
     }
 
@@ -3279,7 +3279,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[17]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3383,7 +3383,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[18]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3435,9 +3435,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "content_type" field.</summary>
     public const int ContentTypeFieldNumber = 3;
-    private global::SKF.Enlight.ProtocolBuffers.NodeDataContentType contentType_ = 0;
+    private global::SKF.Enlight.API.IoT.NodeDataContentType contentType_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.NodeDataContentType ContentType {
+    public global::SKF.Enlight.API.IoT.NodeDataContentType ContentType {
       get { return contentType_; }
       set {
         contentType_ = value;
@@ -3551,7 +3551,7 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           }
           case 24: {
-            contentType_ = (global::SKF.Enlight.ProtocolBuffers.NodeDataContentType) input.ReadEnum();
+            contentType_ = (global::SKF.Enlight.API.IoT.NodeDataContentType) input.ReadEnum();
             break;
           }
         }
@@ -3568,7 +3568,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[19]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3596,11 +3596,11 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "node_data_list" field.</summary>
     public const int NodeDataListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::SKF.Enlight.ProtocolBuffers.NodeData> _repeated_nodeDataList_codec
-        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.ProtocolBuffers.NodeData.Parser);
-    private readonly pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData> nodeDataList_ = new pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData>();
+    private static readonly pb::FieldCodec<global::SKF.Enlight.API.IoT.NodeData> _repeated_nodeDataList_codec
+        = pb::FieldCodec.ForMessage(10, global::SKF.Enlight.API.IoT.NodeData.Parser);
+    private readonly pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData> nodeDataList_ = new pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::SKF.Enlight.ProtocolBuffers.NodeData> NodeDataList {
+    public pbc::RepeatedField<global::SKF.Enlight.API.IoT.NodeData> NodeDataList {
       get { return nodeDataList_; }
     }
 
@@ -3692,7 +3692,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[20]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3793,7 +3793,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[21]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3833,9 +3833,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "node_data" field.</summary>
     public const int NodeDataFieldNumber = 2;
-    private global::SKF.Enlight.ProtocolBuffers.NodeData nodeData_;
+    private global::SKF.Enlight.API.IoT.NodeData nodeData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.NodeData NodeData {
+    public global::SKF.Enlight.API.IoT.NodeData NodeData {
       get { return nodeData_; }
       set {
         nodeData_ = value;
@@ -3916,7 +3916,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.nodeData_ != null) {
         if (nodeData_ == null) {
-          nodeData_ = new global::SKF.Enlight.ProtocolBuffers.NodeData();
+          nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
         }
         NodeData.MergeFrom(other.NodeData);
       }
@@ -3937,7 +3937,7 @@ namespace SKF.Enlight.ProtocolBuffers {
           }
           case 18: {
             if (nodeData_ == null) {
-              nodeData_ = new global::SKF.Enlight.ProtocolBuffers.NodeData();
+              nodeData_ = new global::SKF.Enlight.API.IoT.NodeData();
             }
             input.ReadMessage(nodeData_);
             break;
@@ -3956,7 +3956,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[22]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4085,7 +4085,7 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::SKF.Enlight.ProtocolBuffers.IoTReflection.Descriptor.MessageTypes[23]; }
+      get { return global::SKF.Enlight.API.IoT.IoTReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4113,9 +4113,9 @@ namespace SKF.Enlight.ProtocolBuffers {
 
     /// <summary>Field number for the "task" field.</summary>
     public const int TaskFieldNumber = 1;
-    private global::SKF.Enlight.ProtocolBuffers.TaskDescription task_;
+    private global::SKF.Enlight.API.IoT.TaskDescription task_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::SKF.Enlight.ProtocolBuffers.TaskDescription Task {
+    public global::SKF.Enlight.API.IoT.TaskDescription Task {
       get { return task_; }
       set {
         task_ = value;
@@ -4184,7 +4184,7 @@ namespace SKF.Enlight.ProtocolBuffers {
       }
       if (other.task_ != null) {
         if (task_ == null) {
-          task_ = new global::SKF.Enlight.ProtocolBuffers.TaskDescription();
+          task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
         }
         Task.MergeFrom(other.Task);
       }
@@ -4201,7 +4201,7 @@ namespace SKF.Enlight.ProtocolBuffers {
             break;
           case 10: {
             if (task_ == null) {
-              task_ = new global::SKF.Enlight.ProtocolBuffers.TaskDescription();
+              task_ = new global::SKF.Enlight.API.IoT.TaskDescription();
             }
             input.ReadMessage(task_);
             break;
