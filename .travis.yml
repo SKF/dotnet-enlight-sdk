@@ -1,11 +1,19 @@
 ﻿language: csharp
 solution: dotnet-enlight-sdk.sln
 
-matrix:
-  include:
-  - dotnet: 2.0
-    mono: none
-    script:
-    - dotnet restore
-    - dotnet build --configuration Release --no-restore --verbosity n
-  - mono: latest
+mono: none
+dotnet: 2.0
+
+install: dotnet restore
+
+script:
+  - dotnet build --configuration Release --no-restore --verbosity n
+  - dotnet pack --configuration Release --no-build --no-restore --verbosity n /p:Version="$TRAVIS_TAG"
+
+deploy:
+  provider: script
+  script: true # TODO dotnet nuget push -k <key> -s <source> Enlight/bin/Release/SKF.Enlight.*.nupkg
+  on:
+    branch: master
+    tags: true
+
