@@ -33,29 +33,12 @@ namespace SKF.Enlight.Clients
             _client.SetTaskStatus(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
         }
 
-        public List<DSKFFile> AvailableDSKFFiles()
+        public Grpc.Core.IAsyncStreamReader<DSKFFile> AvailableDSKFFile()
         {
-            Task<List<DSKFFile>> task = AvailableDSKFFilesAsync();
-            task.Wait();
-            return task.Result;
-        }
-
-        async public Task<List<DSKFFile>> AvailableDSKFFilesAsync()
-        {
-            var files = new List<DSKFFile>();
-
             using (var response = _client.AvailableDSKFStream(new MProxyHubAPI.AvailableDSKFStreamInput(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))))
             {
-                while (await response.ResponseStream.MoveNext(new CancellationToken()))
-                {
-                    var file = new DSKFFile{
-                        DskfFile = response.ResponseStream.Current.DskfFile,
-                        TaskId = response.ResponseStream.Current.TaskId,
-                    };
-                    files.Add(file);
-                }
+                return response.ResponseStream;
             }
-            return files;
         }
     }
 }
