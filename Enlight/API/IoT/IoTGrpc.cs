@@ -20,14 +20,24 @@ namespace SKF.Enlight.API.IoT {
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.SetTaskStatusInput> __Marshaller_SetTaskStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.SetTaskStatusInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskStreamInput> __Marshaller_GetTaskStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskStreamInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskStreamOutput> __Marshaller_GetTaskStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskStreamOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksByStatusInput> __Marshaller_GetTasksByStatusInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksByStatusInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTasksByStatusOutput> __Marshaller_GetTasksByStatusOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTasksByStatusOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByUUIDInput> __Marshaller_GetTaskByUUIDInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByUUIDInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> __Marshaller_GetTaskByUUIDOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByLongIdInput> __Marshaller_GetTaskByLongIdInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByLongIdInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> __Marshaller_GetTaskByLongIdOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataInput> __Marshaller_IngestNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Marshaller_IngestNodeDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput> __Marshaller_IngestNodeDataStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput> __Marshaller_IngestNodeDataStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetLatestNodeDataInput> __Marshaller_GetLatestNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetLatestNodeDataInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput> __Marshaller_GetLatestNodeDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataInput> __Marshaller_GetNodeDataInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataOutput> __Marshaller_GetNodeDataOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataOutput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataStreamInput> __Marshaller_GetNodeDataStreamInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataStreamInput.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput> __Marshaller_GetNodeDataStreamOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaInput> __Marshaller_GetMediaInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.IoT.GetMediaOutput> __Marshaller_GetMediaOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.IoT.GetMediaOutput.Parser.ParseFrom);
 
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveVoid, global::SKF.Enlight.API.IoT.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.IoT.PrimitiveVoid, global::SKF.Enlight.API.IoT.PrimitiveString>(
         grpc::MethodType.Unary,
@@ -92,6 +102,27 @@ namespace SKF.Enlight.API.IoT {
         __Marshaller_GetTaskStreamInput,
         __Marshaller_GetTaskStreamOutput);
 
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetTasksByStatusInput, global::SKF.Enlight.API.IoT.GetTasksByStatusOutput> __Method_GetTasksByStatus = new grpc::Method<global::SKF.Enlight.API.IoT.GetTasksByStatusInput, global::SKF.Enlight.API.IoT.GetTasksByStatusOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTasksByStatus",
+        __Marshaller_GetTasksByStatusInput,
+        __Marshaller_GetTasksByStatusOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetTaskByUUIDInput, global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> __Method_GetTaskByUUID = new grpc::Method<global::SKF.Enlight.API.IoT.GetTaskByUUIDInput, global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTaskByUUID",
+        __Marshaller_GetTaskByUUIDInput,
+        __Marshaller_GetTaskByUUIDOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetTaskByLongIdInput, global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> __Method_GetTaskByLongId = new grpc::Method<global::SKF.Enlight.API.IoT.GetTaskByLongIdInput, global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTaskByLongId",
+        __Marshaller_GetTaskByLongIdInput,
+        __Marshaller_GetTaskByLongIdOutput);
+
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput> __Method_IngestNodeData = new grpc::Method<global::SKF.Enlight.API.IoT.IngestNodeDataInput, global::SKF.Enlight.API.IoT.IngestNodeDataOutput>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +137,13 @@ namespace SKF.Enlight.API.IoT {
         __Marshaller_IngestNodeDataStreamInput,
         __Marshaller_IngestNodeDataStreamOutput);
 
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetLatestNodeDataInput, global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput> __Method_GetLatestNodeData = new grpc::Method<global::SKF.Enlight.API.IoT.GetLatestNodeDataInput, global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetLatestNodeData",
+        __Marshaller_GetLatestNodeDataInput,
+        __Marshaller_GetLatestNodeDataOutput);
+
     static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetNodeDataInput, global::SKF.Enlight.API.IoT.GetNodeDataOutput> __Method_GetNodeData = new grpc::Method<global::SKF.Enlight.API.IoT.GetNodeDataInput, global::SKF.Enlight.API.IoT.GetNodeDataOutput>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -119,6 +157,13 @@ namespace SKF.Enlight.API.IoT {
         "GetNodeDataStream",
         __Marshaller_GetNodeDataStreamInput,
         __Marshaller_GetNodeDataStreamOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.IoT.GetMediaInput, global::SKF.Enlight.API.IoT.GetMediaOutput> __Method_GetMedia = new grpc::Method<global::SKF.Enlight.API.IoT.GetMediaInput, global::SKF.Enlight.API.IoT.GetMediaOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMedia",
+        __Marshaller_GetMediaInput,
+        __Marshaller_GetMediaOutput);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -174,6 +219,21 @@ namespace SKF.Enlight.API.IoT {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTasksByStatusOutput> GetTasksByStatus(global::SKF.Enlight.API.IoT.GetTasksByStatusInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> GetTaskByUUID(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> GetTaskByLongId(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.IngestNodeDataOutput> IngestNodeData(global::SKF.Enlight.API.IoT.IngestNodeDataInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -184,12 +244,22 @@ namespace SKF.Enlight.API.IoT {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput> GetLatestNodeData(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetNodeDataOutput> GetNodeData(global::SKF.Enlight.API.IoT.GetNodeDataInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       public virtual global::System.Threading.Tasks.Task GetNodeDataStream(global::SKF.Enlight.API.IoT.GetNodeDataStreamInput request, grpc::IServerStreamWriter<global::SKF.Enlight.API.IoT.GetNodeDataStreamOutput> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.IoT.GetMediaOutput> GetMedia(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -355,6 +425,54 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_GetTaskStream, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.IoT.GetTasksByStatusOutput GetTasksByStatus(global::SKF.Enlight.API.IoT.GetTasksByStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTasksByStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTasksByStatusOutput GetTasksByStatus(global::SKF.Enlight.API.IoT.GetTasksByStatusInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTasksByStatus, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTasksByStatusOutput> GetTasksByStatusAsync(global::SKF.Enlight.API.IoT.GetTasksByStatusInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTasksByStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTasksByStatusOutput> GetTasksByStatusAsync(global::SKF.Enlight.API.IoT.GetTasksByStatusInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTasksByStatus, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput GetTaskByUUID(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTaskByUUID(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput GetTaskByUUID(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTaskByUUID, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> GetTaskByUUIDAsync(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTaskByUUIDAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTaskByUUIDOutput> GetTaskByUUIDAsync(global::SKF.Enlight.API.IoT.GetTaskByUUIDInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTaskByUUID, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput GetTaskByLongId(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTaskByLongId(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput GetTaskByLongId(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTaskByLongId, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> GetTaskByLongIdAsync(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTaskByLongIdAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetTaskByLongIdOutput> GetTaskByLongIdAsync(global::SKF.Enlight.API.IoT.GetTaskByLongIdInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTaskByLongId, null, options, request);
+      }
       public virtual global::SKF.Enlight.API.IoT.IngestNodeDataOutput IngestNodeData(global::SKF.Enlight.API.IoT.IngestNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return IngestNodeData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -378,6 +496,22 @@ namespace SKF.Enlight.API.IoT {
       public virtual grpc::AsyncClientStreamingCall<global::SKF.Enlight.API.IoT.IngestNodeDataStreamInput, global::SKF.Enlight.API.IoT.IngestNodeDataStreamOutput> IngestNodeDataStream(grpc::CallOptions options)
       {
         return CallInvoker.AsyncClientStreamingCall(__Method_IngestNodeDataStream, null, options);
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput GetLatestNodeData(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLatestNodeData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput GetLatestNodeData(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetLatestNodeData, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput> GetLatestNodeDataAsync(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetLatestNodeDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetLatestNodeDataOutput> GetLatestNodeDataAsync(global::SKF.Enlight.API.IoT.GetLatestNodeDataInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetLatestNodeData, null, options, request);
       }
       public virtual global::SKF.Enlight.API.IoT.GetNodeDataOutput GetNodeData(global::SKF.Enlight.API.IoT.GetNodeDataInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -403,6 +537,22 @@ namespace SKF.Enlight.API.IoT {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_GetNodeDataStream, null, options, request);
       }
+      public virtual global::SKF.Enlight.API.IoT.GetMediaOutput GetMedia(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMedia(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.IoT.GetMediaOutput GetMedia(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMedia, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetMediaOutput> GetMediaAsync(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMediaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.IoT.GetMediaOutput> GetMediaAsync(global::SKF.Enlight.API.IoT.GetMediaInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMedia, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override IoTClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -424,10 +574,15 @@ namespace SKF.Enlight.API.IoT {
           .AddMethod(__Method_GetUncompletedTasksByHierarchy, serviceImpl.GetUncompletedTasksByHierarchy)
           .AddMethod(__Method_SetTaskStatus, serviceImpl.SetTaskStatus)
           .AddMethod(__Method_GetTaskStream, serviceImpl.GetTaskStream)
+          .AddMethod(__Method_GetTasksByStatus, serviceImpl.GetTasksByStatus)
+          .AddMethod(__Method_GetTaskByUUID, serviceImpl.GetTaskByUUID)
+          .AddMethod(__Method_GetTaskByLongId, serviceImpl.GetTaskByLongId)
           .AddMethod(__Method_IngestNodeData, serviceImpl.IngestNodeData)
           .AddMethod(__Method_IngestNodeDataStream, serviceImpl.IngestNodeDataStream)
+          .AddMethod(__Method_GetLatestNodeData, serviceImpl.GetLatestNodeData)
           .AddMethod(__Method_GetNodeData, serviceImpl.GetNodeData)
-          .AddMethod(__Method_GetNodeDataStream, serviceImpl.GetNodeDataStream).Build();
+          .AddMethod(__Method_GetNodeDataStream, serviceImpl.GetNodeDataStream)
+          .AddMethod(__Method_GetMedia, serviceImpl.GetMedia).Build();
     }
 
   }
