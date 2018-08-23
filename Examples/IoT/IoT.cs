@@ -39,6 +39,14 @@ namespace SKF.Enlight.Examples
                 Console.WriteLine($"Sending ping to: {host}:{port}");
                 Console.WriteLine("Reply: " + client.DeepPing());
 
+
+                while (true)
+                {
+                    // Test the DeepPing method
+                    Console.WriteLine($"Sending ping to: {host}:{port}");
+                    Console.WriteLine("Reply: " + client.DeepPing());
+                }
+
                 // Test the IngestData method
                 Console.WriteLine("Sending data to IngestNodeData");
 

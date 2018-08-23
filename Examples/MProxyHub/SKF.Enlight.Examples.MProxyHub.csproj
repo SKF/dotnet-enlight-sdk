@@ -7,6 +7,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject>SKF.Enlight.Examples.MProxyHub</StartupObject>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
 </Project>

@@ -2,12 +2,15 @@
 using System.IO;
 using SKF.Enlight.Clients;
 using SKF.Enlight.API.MProxyHub;
+using System.Threading;
+using System.Threading.Tasks;
+using MProxyHubAPI = SKF.Enlight.API.MProxyHub;
 
 namespace SKF.Enlight.Examples
 {
     public class MProxyHub
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             // Setup, fetch certs etc.
             const string basePath = "../../../certs";
@@ -35,20 +38,20 @@ namespace SKF.Enlight.Examples
                     Path.Combine(basePath, "mproxyhub_client.key"),
                     host, int.Parse(port));
 
-                // Test the DeepPing method
                 Console.WriteLine($"Sending ping to: {host}:{port}");
                 Console.WriteLine("Reply: " + client.DeepPing());
 
-                // Test the SetTaskStatus method
-                Console.WriteLine("Setting completed status of a task");
-                client.SetTaskStatus("a task id", "some user", TaskStatus.Completed);
-
-                // Test the"
                 Console.WriteLine("Checking for available DSKF Files");
-                var files = client.AvailableDSKFFiles();
-                Console.WriteLine($"Reply: {files}");
 
-                // All done, close cleanly.
+                using (var call = client._client.AvailableDSKFStream(new MProxyHubAPI.AvailableDSKFStreamInput(), new Grpc.Core.CallOptions()))
+                {
+                    while (await call.ResponseStream.MoveNext(CancellationToken.None))
+                    {
+                        var message = call.ResponseStream.Current;
+                        Console.WriteLine($"grpcStream: message: {message.ToString()}");
+                    };
+                }
+
                 client.Close();
             }
 

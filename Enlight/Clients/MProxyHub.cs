@@ -10,7 +10,7 @@ namespace SKF.Enlight.Clients
 {
     public class MProxyHub : Client
     {
-        private MProxyHubAPI.MicrologProxyHub.MicrologProxyHubClient _client;
+        public MProxyHubAPI.MicrologProxyHub.MicrologProxyHubClient _client;
 
         public MProxyHub(string cacert, string cert, string key, string host, int port) : base(cacert, cert, key, host, port)
         {
@@ -22,18 +22,17 @@ namespace SKF.Enlight.Clients
             return _client.DeepPing(new MProxyHubAPI.Void(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))).ToString();
         }
 
-        public void SetTaskStatus(string taskId, string userId, MProxyHubAPI.TaskStatus taskStatus)
+        public void SetTaskStatus(Int64 taskId, MProxyHubAPI.TaskStatus taskStatus)
         {
             MProxyHubAPI.SetTaskStatusInput request = new MProxyHubAPI.SetTaskStatusInput
             {
-                TaskId = taskId,
-                UserId = userId,
+                Id = taskId,
                 Status = taskStatus,
             };
             _client.SetTaskStatus(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
         }
 
-        public Grpc.Core.IAsyncStreamReader<DSKFFile> AvailableDSKFFile()
+        public Grpc.Core.IAsyncStreamReader<DSKFFile> AvailableDSKFFilesAsyncStream()
         {
             using (var response = _client.AvailableDSKFStream(new MProxyHubAPI.AvailableDSKFStreamInput(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))))
             {
