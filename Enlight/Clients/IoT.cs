@@ -14,11 +14,11 @@ namespace SKF.Enlight.Clients
             _client = new IoTAPI.IoT.IoTClient(_conn.Channel);
         }
 
-        public void IngestNodeData(Guid nodeid, IoTAPI.NodeData data)
+        public void IngestNodeData(Guid nodeId, IoTAPI.NodeData data)
         {
             var request = new IoTAPI.IngestNodeDataInput
             {
-                NodeId = nodeid.ToString(),
+                NodeId = nodeId.ToString(),
                 NodeData = data,
             };
             _client.IngestNodeData(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
@@ -29,14 +29,26 @@ namespace SKF.Enlight.Clients
             return _client.DeepPing(new IoTAPI.PrimitiveVoid(), new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10))).ToString();
         }
 
-        public List<IoTAPI.TaskDescription> GetTasksByStatus(string id, IoTAPI.TaskStatus status)
+        public void SetTaskStatus(Guid taskID, Guid userID, IoTAPI.TaskStatus taskStatus)
+        {
+            IoTAPI.SetTaskStatusInput request = new IoTAPI.SetTaskStatusInput
+            {
+                TaskId = taskID.ToString(),
+                UserId = userID.ToString(),
+                Status = taskStatus,
+                UpdatedAt = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
+            };
+            _client.SetTaskStatus(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
+        }
+
+        public List<IoTAPI.TaskDescription> GetTasksByStatus(Guid hierarchyId, IoTAPI.TaskStatus taskStatus)
         {
             var list = new List<IoTAPI.TaskDescription>();
 
             var request = new IoTAPI.GetTasksByStatusInput
             {
-                HierarchyId = id,
-                Status = status,
+                HierarchyId = hierarchyId.ToString(),
+                Status = taskStatus,
             };
             var reply = _client.GetTasksByStatus(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
 
@@ -48,22 +60,22 @@ namespace SKF.Enlight.Clients
             return list;
         }
 
-        public IoTAPI.TaskDescription GetTaskByUUID(Guid id)
+        public IoTAPI.TaskDescription GetTaskByUUID(Guid taskId)
         {
             var request = new IoTAPI.GetTaskByUUIDInput
             {
-                TaskId = id.ToString(),
+                TaskId = taskId.ToString(),
             };
             var reply = _client.GetTaskByUUID(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
 
             return reply.Task;
         }
 
-        public IoTAPI.TaskDescription GetTaskByLongId(UInt64 id)
+        public IoTAPI.TaskDescription GetTaskByLongId(UInt64 taskMicrologId)
         {
             var request = new IoTAPI.GetTaskByLongIdInput
             {
-                TaskId = id,
+                TaskId = taskMicrologId,
             };
             var reply = _client.GetTaskByLongId(request, new Grpc.Core.CallOptions(deadline: DateTime.UtcNow.AddSeconds(10)));
 
