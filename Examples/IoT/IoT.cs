@@ -89,6 +89,11 @@ namespace SKF.Enlight.Examples
                     }
                 );
 
+                //Set Task Status
+                Guid taskID = Guid.NewGuid();   // Use a specific node id instead
+                Guid userID = Guid.NewGuid();  // Use a specific node id instead
+                client.SetTaskStatus(taskID, userID, TaskStatus.InProgress);
+
                 // All done, close cleanly.
                 client.Close();
             }
