@@ -27,3 +27,7 @@ PLUGIN=~/.nuget/packages/grpc.tools/1.13.1/tools/linux_x64/grpc_csharp_plugin
 cd API
 $PROTOC -I . --csharp_out . *.proto --grpc_out . --plugin protoc-gen-grpc=$PLUGIN
 ```
+
+
+### Upload nuget package
+nuget.exe push -Source selenium-feed -ApiKey key C:\Projects\src\github.com\SKF\dotnet-enlight-sdk\Enlight\bin\Release\SKF.Enlight.1.0.7.nupkg

@@ -19,6 +19,7 @@
     <RepositoryUrl>https://github.com/SKF/dotnet-enlight-sdk</RepositoryUrl>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Title>SKF Enlight</Title>
+    <Version>1.0.7</Version>
   </PropertyGroup>
 
 </Project>
