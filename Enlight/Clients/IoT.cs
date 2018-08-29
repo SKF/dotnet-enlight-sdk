@@ -71,7 +71,7 @@ namespace SKF.Enlight.Clients
             return reply.Task;
         }
 
-        public IoTAPI.TaskDescription GetTaskByLongId(UInt64 taskMicrologId)
+        public IoTAPI.TaskDescription GetTaskByLongId(Int64 taskMicrologId)
         {
             var request = new IoTAPI.GetTaskByLongIdInput
             {
