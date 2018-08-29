@@ -5,7 +5,6 @@ Examples of .NET Enlight SDK usage
 ## Services
 
 - IoT `IOT`
-- MicrologProxyHub (MProxyHub) `MPROXYHUB`
 
 ## Install
 

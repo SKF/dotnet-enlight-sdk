@@ -12,55 +12,87 @@ namespace SKF.Enlight.API.Hierarchy {
   {
     static readonly string __ServiceName = "grpcapi.Hierarchy";
 
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Void> __Marshaller_Void = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Void.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.String> __Marshaller_String = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.String.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Node> __Marshaller_Node = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Node.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Nodes> __Marshaller_Nodes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Nodes.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.SaveNodeInput> __Marshaller_SaveNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput> __Marshaller_DeleteNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Bytes> __Marshaller_Bytes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Bytes.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid> __Marshaller_grpcapi_PrimitiveVoid = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.PrimitiveVoid.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.PrimitiveString> __Marshaller_grpcapi_PrimitiveString = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.PrimitiveString.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Node> __Marshaller_grpcapi_Node = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Node.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.Nodes> __Marshaller_grpcapi_Nodes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.Nodes.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput> __Marshaller_grpcapi_GetAncestorsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> __Marshaller_grpcapi_GetAncestorsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.SaveNodeInput> __Marshaller_grpcapi_SaveNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.SaveNodeInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput> __Marshaller_grpcapi_DeleteNodeInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.DeleteNodeInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsInput> __Marshaller_grpcapi_GetEventsInput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetEventsInput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> __Marshaller_grpcapi_GetEventsOutput = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.GetEventsOutput.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::SKF.Enlight.API.Hierarchy.PrimitiveBytes> __Marshaller_grpcapi_PrimitiveBytes = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::SKF.Enlight.API.Hierarchy.PrimitiveBytes.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.Void, global::SKF.Enlight.API.Hierarchy.String> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Hierarchy.Void, global::SKF.Enlight.API.Hierarchy.String>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid, global::SKF.Enlight.API.Hierarchy.PrimitiveString> __Method_DeepPing = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid, global::SKF.Enlight.API.Hierarchy.PrimitiveString>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeepPing",
-        __Marshaller_Void,
-        __Marshaller_String);
+        __Marshaller_grpcapi_PrimitiveVoid,
+        __Marshaller_grpcapi_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.String, global::SKF.Enlight.API.Hierarchy.Node> __Method_GetNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.String, global::SKF.Enlight.API.Hierarchy.Node>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node> __Method_GetNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNode",
-        __Marshaller_String,
-        __Marshaller_Node);
+        __Marshaller_grpcapi_PrimitiveString,
+        __Marshaller_grpcapi_Node);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.String, global::SKF.Enlight.API.Hierarchy.Nodes> __Method_GetNodes = new grpc::Method<global::SKF.Enlight.API.Hierarchy.String, global::SKF.Enlight.API.Hierarchy.Nodes>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Nodes> __Method_GetNodes = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Nodes>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNodes",
-        __Marshaller_String,
-        __Marshaller_Nodes);
+        __Marshaller_grpcapi_PrimitiveString,
+        __Marshaller_grpcapi_Nodes);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.SaveNodeInput, global::SKF.Enlight.API.Hierarchy.String> __Method_SaveNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.SaveNodeInput, global::SKF.Enlight.API.Hierarchy.String>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Nodes> __Method_GetChildNodes = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Nodes>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetChildNodes",
+        __Marshaller_grpcapi_PrimitiveString,
+        __Marshaller_grpcapi_Nodes);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node> __Method_GetParentNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveString, global::SKF.Enlight.API.Hierarchy.Node>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetParentNode",
+        __Marshaller_grpcapi_PrimitiveString,
+        __Marshaller_grpcapi_Node);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput, global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> __Method_GetAncestors = new grpc::Method<global::SKF.Enlight.API.Hierarchy.GetAncestorsInput, global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAncestors",
+        __Marshaller_grpcapi_GetAncestorsInput,
+        __Marshaller_grpcapi_GetAncestorsOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.SaveNodeInput, global::SKF.Enlight.API.Hierarchy.PrimitiveString> __Method_SaveNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.SaveNodeInput, global::SKF.Enlight.API.Hierarchy.PrimitiveString>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SaveNode",
-        __Marshaller_SaveNodeInput,
-        __Marshaller_String);
+        __Marshaller_grpcapi_SaveNodeInput,
+        __Marshaller_grpcapi_PrimitiveString);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput, global::SKF.Enlight.API.Hierarchy.Void> __Method_DeleteNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput, global::SKF.Enlight.API.Hierarchy.Void>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput, global::SKF.Enlight.API.Hierarchy.PrimitiveVoid> __Method_DeleteNode = new grpc::Method<global::SKF.Enlight.API.Hierarchy.DeleteNodeInput, global::SKF.Enlight.API.Hierarchy.PrimitiveVoid>(
         grpc::MethodType.Unary,
         __ServiceName,
         "DeleteNode",
-        __Marshaller_DeleteNodeInput,
-        __Marshaller_Void);
+        __Marshaller_grpcapi_DeleteNodeInput,
+        __Marshaller_grpcapi_PrimitiveVoid);
 
-    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.Void, global::SKF.Enlight.API.Hierarchy.Bytes> __Method_GetEventStream = new grpc::Method<global::SKF.Enlight.API.Hierarchy.Void, global::SKF.Enlight.API.Hierarchy.Bytes>(
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.GetEventsInput, global::SKF.Enlight.API.Hierarchy.GetEventsOutput> __Method_GetEvents = new grpc::Method<global::SKF.Enlight.API.Hierarchy.GetEventsInput, global::SKF.Enlight.API.Hierarchy.GetEventsOutput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetEvents",
+        __Marshaller_grpcapi_GetEventsInput,
+        __Marshaller_grpcapi_GetEventsOutput);
+
+    static readonly grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid, global::SKF.Enlight.API.Hierarchy.PrimitiveBytes> __Method_GetEventStream = new grpc::Method<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid, global::SKF.Enlight.API.Hierarchy.PrimitiveBytes>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetEventStream",
-        __Marshaller_Void,
-        __Marshaller_Bytes);
+        __Marshaller_grpcapi_PrimitiveVoid,
+        __Marshaller_grpcapi_PrimitiveBytes);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -71,32 +103,52 @@ namespace SKF.Enlight.API.Hierarchy {
     /// <summary>Base class for server-side implementations of Hierarchy</summary>
     public abstract partial class HierarchyBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.String> DeepPing(global::SKF.Enlight.API.Hierarchy.Void request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.PrimitiveString> DeepPing(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Node> GetNode(global::SKF.Enlight.API.Hierarchy.String request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Node> GetNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodes(global::SKF.Enlight.API.Hierarchy.String request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.String> SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Nodes> GetChildNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Void> DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.Node> GetParentNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task GetEventStream(global::SKF.Enlight.API.Hierarchy.Void request, grpc::IServerStreamWriter<global::SKF.Enlight.API.Hierarchy.Bytes> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> GetAncestors(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.PrimitiveString> SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid> DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> GetEvents(global::SKF.Enlight.API.Hierarchy.GetEventsInput request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task GetEventStream(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::IServerStreamWriter<global::SKF.Enlight.API.Hierarchy.PrimitiveBytes> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -126,91 +178,155 @@ namespace SKF.Enlight.API.Hierarchy {
       {
       }
 
-      public virtual global::SKF.Enlight.API.Hierarchy.String DeepPing(global::SKF.Enlight.API.Hierarchy.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveString DeepPing(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.String DeepPing(global::SKF.Enlight.API.Hierarchy.Void request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveString DeepPing(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.String> DeepPingAsync(global::SKF.Enlight.API.Hierarchy.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeepPingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.String> DeepPingAsync(global::SKF.Enlight.API.Hierarchy.Void request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveString> DeepPingAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeepPing, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Node GetNode(global::SKF.Enlight.API.Hierarchy.String request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.Node GetNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Node GetNode(global::SKF.Enlight.API.Hierarchy.String request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Hierarchy.Node GetNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNode, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetNodeAsync(global::SKF.Enlight.API.Hierarchy.String request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetNodeAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetNodeAsync(global::SKF.Enlight.API.Hierarchy.String request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetNodeAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNode, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetNodes(global::SKF.Enlight.API.Hierarchy.String request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetNodes(global::SKF.Enlight.API.Hierarchy.String request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNodes, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodesAsync(global::SKF.Enlight.API.Hierarchy.String request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodesAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodesAsync(global::SKF.Enlight.API.Hierarchy.String request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetNodesAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNodes, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.String SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetChildNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChildNodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.Nodes GetChildNodes(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetChildNodes, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetChildNodesAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetChildNodesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Nodes> GetChildNodesAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetChildNodes, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.Node GetParentNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetParentNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.Node GetParentNode(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetParentNode, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetParentNodeAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetParentNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Node> GetParentNodeAsync(global::SKF.Enlight.API.Hierarchy.PrimitiveString request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetParentNode, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput GetAncestors(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAncestors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput GetAncestors(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAncestors, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> GetAncestorsAsync(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAncestorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.GetAncestorsOutput> GetAncestorsAsync(global::SKF.Enlight.API.Hierarchy.GetAncestorsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAncestors, null, options, request);
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveString SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SaveNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.String SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveString SaveNode(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SaveNode, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.String> SaveNodeAsync(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveString> SaveNodeAsync(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SaveNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.String> SaveNodeAsync(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveString> SaveNodeAsync(global::SKF.Enlight.API.Hierarchy.SaveNodeInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SaveNode, null, options, request);
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Void DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveVoid DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::SKF.Enlight.API.Hierarchy.Void DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::CallOptions options)
+      public virtual global::SKF.Enlight.API.Hierarchy.PrimitiveVoid DeleteNode(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteNode, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Void> DeleteNodeAsync(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid> DeleteNodeAsync(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.Void> DeleteNodeAsync(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.PrimitiveVoid> DeleteNodeAsync(global::SKF.Enlight.API.Hierarchy.DeleteNodeInput request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNode, null, options, request);
       }
-      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.Hierarchy.Bytes> GetEventStream(global::SKF.Enlight.API.Hierarchy.Void request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::SKF.Enlight.API.Hierarchy.GetEventsOutput GetEvents(global::SKF.Enlight.API.Hierarchy.GetEventsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::SKF.Enlight.API.Hierarchy.GetEventsOutput GetEvents(global::SKF.Enlight.API.Hierarchy.GetEventsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetEvents, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> GetEventsAsync(global::SKF.Enlight.API.Hierarchy.GetEventsInput request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::SKF.Enlight.API.Hierarchy.GetEventsOutput> GetEventsAsync(global::SKF.Enlight.API.Hierarchy.GetEventsInput request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetEvents, null, options, request);
+      }
+      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.Hierarchy.PrimitiveBytes> GetEventStream(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEventStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.Hierarchy.Bytes> GetEventStream(global::SKF.Enlight.API.Hierarchy.Void request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::SKF.Enlight.API.Hierarchy.PrimitiveBytes> GetEventStream(global::SKF.Enlight.API.Hierarchy.PrimitiveVoid request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_GetEventStream, null, options, request);
       }
@@ -229,8 +345,12 @@ namespace SKF.Enlight.API.Hierarchy {
           .AddMethod(__Method_DeepPing, serviceImpl.DeepPing)
           .AddMethod(__Method_GetNode, serviceImpl.GetNode)
           .AddMethod(__Method_GetNodes, serviceImpl.GetNodes)
+          .AddMethod(__Method_GetChildNodes, serviceImpl.GetChildNodes)
+          .AddMethod(__Method_GetParentNode, serviceImpl.GetParentNode)
+          .AddMethod(__Method_GetAncestors, serviceImpl.GetAncestors)
           .AddMethod(__Method_SaveNode, serviceImpl.SaveNode)
           .AddMethod(__Method_DeleteNode, serviceImpl.DeleteNode)
+          .AddMethod(__Method_GetEvents, serviceImpl.GetEvents)
           .AddMethod(__Method_GetEventStream, serviceImpl.GetEventStream).Build();
     }
 
